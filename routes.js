@@ -1,3 +1,34 @@
+const express = require('express')
+const router = express.Router()
+const {productsController} = require('../controllers')
+
+const {
+    getReservas,
+    getReservasId,
+    postReserva,
+    putReserva,
+    deleteReservas
+} = productsController
+
+
+
+router.post('/', postReserva)
+router.get('/', getReservas)
+router.get('/:id', getReservasId)
+router.put('/:id', putReserva)
+router.delete('/:id', deleteReservas)
+
+module.exports = router
+
+
+
+
+
+
+
+
+
+/*
 const express = require ("express")
 const router = express.Router()
 const {
@@ -27,6 +58,8 @@ const {
  */
 
 
+
+/*
 router.post(`/`, postReserva)
 router.get(`/`, getReservas)
 router.get(`/:id`, getReservasId)
@@ -34,6 +67,9 @@ router.put(`/:id`, putReserva)
 router.delete(`/:id`, deleteReservas)
 
 module.exports = router
+
+
++/
 
 
 /*
